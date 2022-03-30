@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1>EDITANDO LA PELICULA <%= movie.title %> </h1>
+    <form action="/movies/update/<%=movie.id%>" method="post">
+            <label>title: <input type="text" name="title" value="<%=movie.title%> "></label><br>
+         <label>rating: <input type="text" name="rating" value="<%= movie.rating %> "></label><br>
+            <label>length: <input type="text" name="length" value="<%=movie.length%>"></label><br>
+            <label>awards: <input type="text" name="awards" value="<%= movie.awards %> "></label><br>
+            <label>releaseDate: <input type="text" name="releaseDate" value="<%= movie.release_date%> "></label><br>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
